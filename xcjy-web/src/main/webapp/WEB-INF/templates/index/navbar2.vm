@@ -1,0 +1,110 @@
+
+#* 多级菜单导航   *#
+
+<link rel="stylesheet" href="$!{rc.contextPath}/css/templates/navbar.css">
+    <script src="$!{rc.contextPath}/js/templates/index/navbar.js"></script>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menus" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="$!{rc.contextPath}/images/logo/logo.jpg" style="max-width:16px;">
+</a>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="navbar-menus">
+    <ul id="menus" class="nav nav-pills">
+        <li>
+            <a href="#" data-toggle="pill" onclick="return showMain('$!{rc.contextPath}/gojumbotron');" >Link</a>
+        </li>
+        <li>
+            <a id="a2" href="#" data-toggle="pill" onclick="return showMain('$!{rc.contextPath}/gojumbotron2');" >Link</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" data-toggle="pill">Action</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="pill">Another action</a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="pill">Something else here</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="#" data-toggle="pill">Separated link</a>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                    <a href="#" data-toggle="pill">One more separated link</a>
+                </li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a data-submenu="" data-toggle="dropdown" tabindex="0" aria-expanded="false">
+                Dropdown 2<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-submenu">
+                    <a data-toggle="dropdown" tabindex="0">Action</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a tabindex="0" href="#" data-toggle="pill">Sub action</a>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="0" href="#" data-toggle="pill">Another sub action</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="0" href="#" data-toggle="pill">Sub action</a>
+                                </li>
+                                <li>
+                                    <a tabindex="0" href="#" data-toggle="pill">Another sub action</a>
+                                </li>
+                                <li>
+                                    <a tabindex="0" href="#" data-toggle="pill">Something else here</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a tabindex="0" href="#" data-toggle="pill">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a tabindex="0" href="#" data-toggle="pill">Another action</a>
+                </li>
+                <li class="dropdown-submenu">
+                    <a tabindex="0" href="#" data-toggle="pill">Something else here</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a tabindex="0" href="#" data-toggle="pill">Sub action</a>
+                        </li>
+                        <li>
+                            <a tabindex="0" href="#" data-toggle="pill">Another sub action</a>
+                        </li>
+                        <li>
+                            <a tabindex="0" href="#" data-toggle="pill">Something else here</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a tabindex="0" href="#" data-toggle="pill">Separated link</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+</nav>

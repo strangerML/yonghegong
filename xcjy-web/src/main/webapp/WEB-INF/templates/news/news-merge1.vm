@@ -1,0 +1,82 @@
+#set($layout="layout/layout-null.vm")
+
+<link href="$!{rc.contextPath}/css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="$!{rc.contextPath}/js/fileinput/fileinput.js" type="text/javascript"></script>
+<script src="$!{rc.contextPath}/js/fileinput/fileinput_locale_zh.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/js/templates/news/news-merge1.js"></script>*#
+<div class="modal fade bs-example-modal-lg" id="news-merge-modal" tabindex="-1" role="dialog" aria-labelledby="news-merge-label">
+                <div class="modal-dialog modal-lg" role="document" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="news-merge-label">信息编辑</h4>
+                        </div>
+                        <div class="modal-body">
+							<form id="news-merge-form" class="form-horizontal" enctype="multipart/form-data">
+								<input id="id" name="id" type="hidden" value="$!{news.id}">
+            					<input id="newsTypeId" name="newsTypeId" type="hidden" value="$!{newsTypeId}">	
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="newsTitle">标题</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" id="newsTitle" name="newsTitle" value="$!{news.newsTitle}"/>
+                                    </div>
+                                </div>	
+								
+								<div class="form-group">
+                                    <label class="col-lg-3 control-label" for="picUrl">微信封面图片</label>
+                                    <div class="col-lg-8">
+										#if ($!{news.picUrl} && "" != $!{news.picUrl})
+                							<div >
+												<img id="delImgId" src= "http://localhost:8888/$!{news.picUrl}"/>
+												<a role="button" id="btn-del">删除图片</a>
+											</div>
+											
+                						#end
+                                        <input id="pic-only"  type="file" name="file">
+                                        <input type="hidden" class="form-control" id="picUrl" name="picUrl" value="$!{news.picUrl}"/>
+                                    </div>
+                                </div>
+								<div class="form-group">
+                                    <label class="col-lg-3 control-label" for="publishTime">发布时间</label>
+                                    <div class="col-lg-8">
+                                     <input type="text" size="16" class="form-control input-append date form_datetime" id="createTime" name="createTime" value="$!date.format('yyyy-MM-dd HH:mm:ss ',$!{news.createTime})" readonly/>
+                                    </div>
+                                </div>
+								<div class="form-group">
+                                    <label class="col-lg-3 control-label" for="columnType">所属栏目</label>
+                                    <div class="col-lg-8">
+                                        <select class="form-control" name="columnType" id="columnType" >
+											<option value="">请选择</option>
+											<option value="1" #if(${news.columnType} == 1) selected #end>中心介绍</option>
+                                            <option value="2" #if(${news.columnType} == 2) selected #end>公告通知</option>
+                                            <option value="3" #if(${news.columnType} == 3) selected #end>招生政策</option>
+                                            <option value="4" #if(${news.columnType} == 4) selected #end>问题答疑</option>
+                                            <option value="5" #if(${news.columnType} == 5) selected #end>相关下载</option>
+                                            <option value="6" #if(${news.columnType} == 6) selected #end>中心新闻</option>
+                                            <option value="7" #if(${news.columnType} == 7) selected #end>最新公告</option>
+                                            <option value="8" #if(${news.columnType} == 8) selected #end>工会活动</option>
+                                            <option value="9" #if(${news.columnType} == 9) selected #end>党务工作</option>
+                                            <option value="10" #if(${news.columnType} == 10) selected #end>政务公开</option>
+										</select>
+                                    </div>
+                                </div>	
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="contents">内容</label>
+                                    <div class="col-lg-8">
+										<textarea rows="3" id="contents" name="contents" >$!{news.contents}</textarea>
+                                    </div>
+                                </div>	
+																
+								
+            			 	</form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" id="btn-news-merge">保存</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                        </div>
+                    </div>
+                </div>
+            </div>

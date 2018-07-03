@@ -1,0 +1,22 @@
+<footer class="footer">
+      <div class="link">
+          <p><font style="font-weight:bold;">友情链接</font><br />
+              <span><a target="_blank" href="http://www.xchjw.gov.cn/">西城区教育委员会</a></span>
+              <span><a target="_blank" href="http://www.bjeea.cn/">北京教育考试院</a></span>    
+              <span><a href="http://www.dcks.org.cn/" target="_blank">东城区教育招生考试中心</a></span> 
+    		  <span><a href="http://www.hdks.gov.cn/" target="_blank">海淀区教育招生和考试中心</a></span>
+              <span><a href="http://www.cyks.org.cn/" target="_blank">朝阳区招生考试中心</a></span> 
+              <span><a href="http://kszx.ftedu.cn/" target="_blank">丰台区招生考试中心</a></span>
+    		  <span><a href="http://kszx.daxingedu.cn/" target="_blank">大兴区教育考试中心</a></span>
+              <span><a target="_blank" href="http://www.hredu.gov.cn/" >怀柔区教育委员会</a></span>
+              <span><a target="_blank" href="http://www.yqedu.com.cn/SitePages/Home.aspx">延庆区教育委员会</a></span>
+              <span><a target="_blank" href="http://www.myedu.gov.cn/">密云区教育委员会</a></span>
+              <span><a href="http://www.shyedu.cn/" target="_blank">顺义区教育委员会</a></span>
+              <span><a target="_blank" href="http://www.chpedu.net/index.shtml">昌平区教育委员会</a></span>
+          </p>
+     </div>
+     
+     <div class="bottom">
+          <p>版权所有 Copyright © 2016-2018 <img src="$!{rc.contextPath}/images/b01.png" width="25" height="25" /><img src="$!{rc.contextPath}/images/b02.png" width="25" height="25" /> 京ICP备05067791号 X</p>
+     </div>
+</footer>

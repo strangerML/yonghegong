@@ -1,0 +1,12 @@
+com\xcjy\frontend\config\initializer\SpringWebApplicationInitializer.class
+com\xcjy\frontend\utils\DataTablesPageModel.class
+com\xcjy\frontend\config\spring\DataConfig$1.class
+com\xcjy\frontend\config\spring\AppConfig.class
+com\xcjy\frontend\controller\agency\CadreController.class
+com\xcjy\frontend\utils\DownloadServlet.class
+com\xcjy\frontend\config\spring\ServiceConfig.class
+com\xcjy\frontend\controller\news\NewsController.class
+com\xcjy\frontend\controller\main\MainController.class
+com\xcjy\frontend\utils\UploadFileServlet.class
+com\xcjy\frontend\config\mvc\WebConfig.class
+com\xcjy\frontend\config\spring\DataConfig.class

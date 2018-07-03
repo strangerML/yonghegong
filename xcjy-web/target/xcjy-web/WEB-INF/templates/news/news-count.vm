@@ -1,0 +1,26 @@
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">总点击次数</h3>
+        </div>
+        <div class="panel-body"  >
+			<div class="row">
+				<div class="col-xs-12" >
+				<form class="form-inline">
+					<div class="form-group">
+                        <label for="search-newsTitle">总点击次数：</label>
+                        <input type="text" class="form-control" id="search-newsTitle" placeholder="" value="$!{num}">
+                    </div>
+					
+            </form>
+            </div>
+            </div>
+    		
+    		
+    		
+    		
+        </div>
+    	
+    </div>
+
+			
+

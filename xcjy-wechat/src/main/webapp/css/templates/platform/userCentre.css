@@ -1,0 +1,42 @@
+*{ margin:0; padding:0; list-style:none;}
+body{ font-family:"微软雅黑";}
+.contener{ width:100%; height:auto; margin:0 auto; background-color:#f0eff4;}
+.header{ width:100%; height:365px; background-color:#14ada8; margin:0 auto; text-align:center; color:#FFF; font-size:32px;}
+.header img{ margin-top:116px;}
+.header_b{ width:90%; height:90px; line-height:90px; background-color:#FFF; margin-left:60px; float:left; margin-top:10px; font-size:24px; border-bottom:1px solid #CCC;}
+.header_a{ float:right;}
+.header_b img{ margin-top:10px;}
+.header_c{ float:left; margin-top:16px; margin-right:30px;}
+.page-footer {width: 100%; box-shadow: 0 -2px 4px #d7d7d7; overflow: hidden;}
+.fixed-footer {position: fixed; bottom: 0; left: 0;}
+.page-footer ul {width: 100%; background-color: #fff; overflow: hidden;}
+.page-footer ul li {float: left; width: 25%; text-align: center; padding: 3% 0;}
+.page-footer ul li a {width: 100%; display: block; color:#474646;}
+.page-footer ul li a:hover{ color:#33F;}
+
+a, button, textarea, select {-webkit-appearance: none; -webkit-tap-highlight-color: rgba(255,0,0,0);}
+a {text-decoration: none; outline: none;}
+a {background-color: transparent;}
+* {margin: 0; padding: 0;}
+user agent stylesheeta:-webkit-any-link {color: -webkit-link; text-decoration: underline; cursor: auto;}
+Inherited from li
+.page-footer ul li {float: left; width: 25%; text-align: center; padding: 3% 0;}
+user agent stylesheetli {display: list-item; text-align: -webkit-match-parent;}
+Inherited from ul 
+ul {list-style: none;}
+/*我的资料*/
+.header_d{ background-color:#14ada8; width:100%; height:120px; color:#575757;}
+.header_d img{ float:left; margin-top:23px;}
+.header_e{ width:175px; height:65px; line-height:65px; background-color:#2bbeb9; float:left; border-radius:0 15px 15px 0; margin-top:28px; font-size:30px; text-align:center; color:#FFF;}
+.header_f{ width:115px; height:65px; line-height:65px; background-color:#2bbeb9; float:right; border-radius:15px 0 0 15px; margin-top:28px; font-size:30px; text-align:center; color:#FFF;}
+.header_g{ width:90%; height:90px; line-height:90px; margin:0 auto; border-bottom:1px solid #ccc; background-color:#FFF; margin-top:10px; font-size:24px; color:#575757;}
+.header_g p{ float:left;}
+.header_g img{ float:right;}
+.header_g span{ float:right;}
+
+/*家庭成员*/
+.top{ width:90%; height:70px; line-height:70px; margin:0 auto; border-bottom:1px solid #ccc; margin-top:5px; font-size:30px;}
+.top_a{ background-color:#f2f0f0; height:140px; width:90%; margin:0 auto; margin-top:20px;}
+.top_d input{ float:right; width:10%; height:60px; margin-right:20px; margin-top:40px; background-color:#3497ff; font-size:30px;}
+.top_c{ width:50%; font-size:24px; float:left; line-height:45px;}
+.top_c p{ margin-top:20px; margin-left:30px;}

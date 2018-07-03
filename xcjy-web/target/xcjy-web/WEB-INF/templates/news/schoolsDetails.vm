@@ -1,0 +1,69 @@
+#set($htmlTitle = "西城区教育考试中心")
+<link href="$!{rc.contextPath}/css/xiaoxue.css" type="text/css" rel="stylesheet">
+
+	 <div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="left-top">
+                  <img src="$!{rc.contextPath}/images/xiaoxue01.png" width="244" height="8" />
+                  <span>义务教育招生办公室<br />（小学入学）</span>
+             </div>
+             <div class="jianjie">
+                  <p><font></font>联系我们： 63542149</p>
+                  <p><font></font>科室简介：</p>
+                  <span>负责区域内小学招生方案的具体组织与实施工作；负责区域内小学学生的学籍管理工作</span>
+             </div>
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/xiaoxue02.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/xiaoxue03.png" width="20" height="14" /></span><a href="">公告通知</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/xiaoxue03.png" width="20" height="14" /></span><a href="">招生政策</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/xiaoxue03.png" width="20" height="14" /></span><a href="">问题解答</a></li>
+                  </ul>
+             </div>
+             
+             <div class="daohang">
+                  <a href=""><img src="$!{rc.contextPath}/images/chaxun.png" width="244" height="100" /></a>
+             </div>
+             
+             
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>
+				#if($!{news.columnType}==2)
+					公告通知
+				#elseif($!{news.columnType}==3)
+					招生政策
+				#elseif($!{news.columnType}==4)
+					问题解答
+				#end
+			 </div>
+             <div class="chaxunlist">
+                  <h3>$!{news.newsTitle}</h3>
+                  <font>
+					$!{news.contents}
+				  </font>
+             </div>
+        </div>
+              
+     </div>
+     
+#parse("/common/footer.vm")
+

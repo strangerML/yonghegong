@@ -1,0 +1,54 @@
+#set($htmlTitle = "西城考试中心")
+#set($cssFiles = ["css/intro.css"])
+
+	  <div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><a href="http://www.xjks.org"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /></a><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/intro01.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goNewsCenterPage">中心新闻</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goCenterNewsPage" target="_blank">中心简介</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goNoticeNewsPage">最新公告</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goPartyNewsPage">党政工作信息</a></li>
+                  </ul>
+             </div>
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>
+				焦点新闻
+			 </div>
+              <div class="chaxunlist">
+                  <h3>$!{news.name}</h3>
+				  #*
+				    #if($!{news.pictures})
+						<img src= "$!{rc.contextPath}/download?filePath=$!{news.pictures}"/>
+					#end
+				  *#
+                  <font>
+					$!{news.content}
+				  </font>
+             </div>
+        </div>
+              
+     </div>
+     
+#parse("/common/usercenter/footer.vm")
+

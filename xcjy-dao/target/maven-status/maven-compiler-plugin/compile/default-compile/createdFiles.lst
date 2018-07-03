@@ -1,0 +1,16 @@
+com\xcjy\dao\base\SqlBuilder.class
+com\xcjy\dao\news\PicNewsDao.class
+com\xcjy\dao\authority\OperationDao.class
+com\xcjy\dao\agency\CadreDao.class
+com\xcjy\dao\authority\UserRoleDao.class
+com\xcjy\dao\authority\ModuleDao.class
+com\xcjy\dao\authority\PageOperationDao.class
+com\xcjy\dao\authority\RoleDao.class
+com\xcjy\dao\base\BaseDao.class
+com\xcjy\dao\news\NewsTypeDao.class
+com\xcjy\dao\authority\UserDao.class
+com\xcjy\dao\base\SqlBuilder$1.class
+com\xcjy\dao\authority\PermissionDao.class
+com\xcjy\dao\base\EntityBuiler.class
+com\xcjy\dao\contact\ContactDao.class
+com\xcjy\dao\news\NewsDao.class

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- 声明文档结构类型 -->
+<html lang="zh-cn">
+<!-- 声明文档文字区域-->
+<head>
+<!-- js 项目跟路径 -->
+<script type="text/javascript">
+    var basePath='$!{rc.contextPath}/';
+</script>
+#parse("/common/resources.vm")
+	<title>$!{htmlTitle}</title>
+</head>
+<body>
+	 $screen_content  
+</body>
+</HTML>

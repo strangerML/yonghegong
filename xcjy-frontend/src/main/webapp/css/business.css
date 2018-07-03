@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,dl,dd,img,form,div,ul,ol,li,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;border:0;}
+body{font-size:12px;font-family:'微软雅黑',Arial;}
+ul,ol,li{ list-style-type:none;}
+img{border:0;vertical-align:middle}
+select,input,select{vertical-align:middle;outline: none;}
+table{border-collapse:collapse;border-spacing:0}
+iframe{border:none;}
+a:link{color:#666666;text-decoration:none;}
+a:visited{color:#666666;text-decoration:none;}
+a:hover{color:#0093ff;text-decoration:none;}
+a:active{color:#0093ff;text-decoration:none;}
+.c{clear:both;font-size:0;line-height:0;height:0;visibility:visible;}
+.h{display:none;visibility:visible;}
+.wrap{border:0;padding:0;width:1200px;margin:0 auto;*zoom:1;}
+.wrap:after{clear:both;content:"";display:table;}
+.fix{*zoom:1;}
+.fix:after{clear:both;content:"";display:table;}
+.fl{float:left;}
+.fr{float:right;}
+
+/* header */
+.section{overflow:hidden;position:relative!important;}
+.header{height:100px;}
+.header h1{width:154px;}
+.logo{padding-top:24px;}
+.header .logo_text{width:163px;margin-top:24px;padding-left:5px;}
+
+.nav{margin-top:40px;position:relative;}
+.nav li{float:left;padding-left:40px;}
+.nav li a{font-size:16px;color:#000000;line-height:24px;display:inline-block;}
+.nav li a:hover{border-bottom:2px solid #2fafbc;}
+.nav .nav_icon{background:#15909c;height:1px;line-height:1px;display:inline-block;position:relative;top:-6px;*top:0px;}
+
+/*inside*/
+.inside_banner{position: relative;}
+.inside_banner .wrap{height: 100%;}
+.ser_scope{background:#f7f7f7;padding-bottom:70px;}
+.picBox{width:1200px;margin:40px auto;}
+.picBox li{float:left;position:relative;width:400px;display:table;}
+.picBox .ser_info{position:absolute;font-size:16px;color:#333;line-height:40px;text-align:center;width:100%;left:0;}
+.picBox .s1 .ser_info{bottom:0;}
+.picBox .s3 .ser_info{top:0;}
+.picBox .s5 .ser_info{bottom:0;}
+.picBox .ser_shade{background:#fff;opacity:0.6;filter:alhpa(opacity=60);width:100%;height:100%;position:absolute;top:0;left:0;}
+.picBox h2{font-size:16px;color:#333;font-weight:normal;position:relative;z-index:2;}
+.picBox .s2:after{height: 0; width:0;content: "";position: absolute;left:-20px;top:50%;
+                  border-width:10px;
+                  border-style: dashed solid   dashed dashed ;
+                  border-color:transparent #2eafbb   transparent transparent;
+}
+.picBox .s4:after{height: 0; width:0;content:"";position: absolute;right:-20px;top:50%;z-index: 2;
+                  border-width:10px;
+                  border-style:  dashed dashed  dashed solid;
+                  border-color:  transparent  transparent  transparent #2eafbb;
+}
+.picBox .s6:after{height: 0; width:0;content: "";position: absolute;left:50%;top:-20px;
+                  border-width:10px;
+                  border-style: dashed    dashed solid dashed ;
+                  border-color:transparent  transparent #2eafbb transparent;
+}
+.picBox .intro{position:absolute;left:0;top:0;font-size:14px;line-height:26px;color:#fff;margin:auto 28px;padding-top:36px; }
+.picBox dl{position:absolute;left:0;top:0;font-size:14px;line-height:26px;color:#fff;margin:auto 38px;padding-top:36px; }
+.picBox dt{font-size:18px;margin-bottom: 8px;}
+.picBox dd{display:list-item;list-style-type: circle;white-space: nowrap;}
+.picBox li img{width:400px;height:220px;}
+.sp_box{margin-top:40px;}
+.home_title{text-align:center;padding-top:50px;}
+.picScroll-left{ width:1200px;margin: 0 auto;  overflow:hidden; position:relative; padding-bottom: 40px;}
+.picScroll-left .hd{ overflow:hidden; position: absolute;bottom: 0;width: 100%;text-align: center;z-index: 2;}
+.picScroll-left .hd a{display: inline-block;font-size: 20px;font-weight: 200;color: #999;line-height: 38px;border: 1px solid #999;width: 38px;text-align: center;margin: 0 5px;cursor: pointer;}
+.picScroll-left .hd a:hover{color: #333;border-color: #333;}
+
+
+/* footer */
+.contact{background: #2eafbb;margin-top:40px;padding-top:38px;padding-bottom:60px; width:100%; min-width:1600px;}
+.contact h2{margin-bottom:28px;}
+.contact h2 a{font-size:18px;color:#fff;font-weight:normal;}
+.home_about{width:250px;}
+.home_about dt{margin-bottom: 24px;}
+.home_about dt a{font-size:18px;color:#fff;font-weight:normal;}
+.home_about dd{color: #eeeeee;line-height: 28px;font-family: "宋体";}
+.home_about .more{color: #fff;display: inline-block;border: 1px solid #cccccc;line-height: 38px;padding: 0 24px;margin-top: 12px;}
+.home_about .more:hover{border-color: #fff;}
+.home_case{width:300px;margin-left:45px;}
+.home_case li{border-top:1px solid #ccc;height:52px;padding:14px 0;}
+.home_case li:first-child{border:0;padding-top:3px;}
+.home_case li img{float: left;margin-right: 18px;}
+.home_case h5{margin-top:-5px;line-height:28px;}
+.home_case h5 a{font-size:14px;color:#fff;font-weight:normal;}
+.home_case .ttext{line-height:22px;}
+.home_case .ttext a{color:#dddddd;font-family:"宋体";}
+.home_case .label{color: #cccccc;line-height: 28px;}
+.home_service{width: 160px;margin-left:45px;}
+.home_service a.sub{font-size: 12px;color: #fff;line-height: 38px;width: 98px;display: inline-block;border: 1px solid #cccccc;text-align: center;margin-right: 12px;margin-bottom: 12px;margin-top: 3px;}
+.home_service a.sub:hover{border-color: #fff;}
+.home_contact{margin-left:40px;}
+.home_contact li{color: #ddd;margin-bottom: 14px;}
+.home_contact li i{display:inline-block;width:18px;height:18px;margin-right: 10px;vertical-align: middle;}
+.home_contact li .addres{background: url("../images/sprite.png") no-repeat 0 -20px  ;}
+.home_contact li .weibo{background: url("../images/sprite.png") no-repeat -20px -20px  ;}
+.home_contact li .email{background: url("../images/sprite.png") no-repeat -40px -20px  ;}
+.home_contact li .weixin{background: url("../images/sprite.png") no-repeat -80px -20px  ;}
+.home_contact li .call{background: url("../images/sprite.png") no-repeat -0px -0px  ;}
+.home_contact li a{color: #ddd;}
+.blogroll{line-height: 28px;color: #999;text-align: center;padding: 30px 0;}
+.blogroll a{color: #999;display:inline-block;}
+.blogroll a:hover{color: #333;}
+.blogroll .copyright{margin-top: 16px;}

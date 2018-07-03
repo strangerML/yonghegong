@@ -1,0 +1,57 @@
+#set($htmlTitle = "西城考试中心")
+#set($cssFiles = ["css/zikao.css"])
+
+	 <div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><a href="http://www.xjks.org"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /></a><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="left-top">
+                  <img src="$!{rc.contextPath}/images/xiaoxue01.png" width="244" height="8" />
+                  <span>高等教育自学考试办公室<br />（自考办）</span>
+             </div>
+             <div class="jianjie">
+                  <p><font></font>联系我们： 66560135</p>
+                  <p><font></font>科室简介：</p>
+                  <span>义务教育招生办公室义务教育招生办公室义务教育招生办公室义务教育招生办公室</span>
+             </div>
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/zikao02.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/zikao03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goSelfsNoticeNewsPage">公告通知</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/zikao03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goSelfsStudentsNewsPage">招生政策</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/zikao03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goSelfsProblemNewsPage">问题解答</a></li>
+                  </ul>
+             </div>
+             
+             <div class="daohang">
+                  <a href="$!{rc.contextPath}/news/goSelfsResult"><img src="$!{rc.contextPath}/images/chaxun.png" width="244" height="100" /></a>
+             </div>
+             
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>综合查询</div>
+             <div class="chaxun">
+                  <span >暂无可查询内容</span>
+             </div>
+        </div>
+              
+     </div>
+     
+#parse("/common/usercenter/footer.vm")
+

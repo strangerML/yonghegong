@@ -1,0 +1,107 @@
+#set($htmlTitle = "西城考试中心")
+#set($cssFiles = ["css/gaodeng.css"])
+
+	 <div class="top"></div>
+	 <input type="hidden" id="newsTypeId" name="newsTypeId" value="$!{newsTypeId}"/>
+	 <input type="hidden" id="columnType" name="columnType" value="$!{columnType}"/>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><a href="http://www.xjks.org"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /></a><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="left-top">
+                  <img src="$!{rc.contextPath}/images/xiaoxue01.png" width="244" height="8" />
+                  <span>普通高等学校招生办公室<br />（高招办）</span>
+             </div>
+             <div class="jianjie">
+                  <p><font></font>联系我们： 66127094</p>
+                  <p><font></font>科室简介：</p>
+                  <span>负责辖区内高级中等教育学校毕业或具有同等学力的考生高考报名、组考、录取工作</span>
+             </div>
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/gaodeng02.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/gaodeng03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goUniversityNoticeNewsPage">公告通知</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/gaodeng03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goUniversityStudentsNewsPage">招生政策</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/gaodeng03.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goUniversityProblemPage">问题解答</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/gaodeng05.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goUniversityUploadPage">相关下载</a></li>
+                  </ul>
+             </div>
+             
+             <div class="daohang">
+                  <a href="$!{rc.contextPath}/news/goUniversityResult"><img src="$!{rc.contextPath}/images/chaxun.png" width="244" height="100" /></a>
+             </div>
+             
+             
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>
+				#if($columnType==2)
+					公告通知
+				#elseif($columnType==3)
+					招生政策
+				#elseif($columnType==4)
+					问题解答
+				#elseif($columnType==5)
+					相关下载
+				#end
+			 </div>
+             <ul>
+                  #set($newsList=$pm.data)
+				  #foreach($em in $newsList)
+					<li><a target="_blank" href="$!{rc.contextPath}/news/findNewsDetailss?id=$!{em.id}">• 
+						#set($str=$!{em.newsTitle})
+							#if($str.length()>50)
+                            #set($str=$str.substring(0,50))
+                            $str ...
+                        #else
+                            $!{em.newsTitle}
+						#end<span>$!date.format('yyyy-MM-dd ',$!em.createTime)</span></a></li>
+                   #end 
+				   
+				   <div class="page">
+						#if(${pm.recordsTotal}>0)
+							#set($pageNums=${pm.recordsTotal}%${pm.pageSize})
+                    		#if($pageNums>0)
+                    			#set($pageNum=(${pm.recordsTotal}/${pm.pageSize})+1)
+                    		#else
+                    			#set($pageNum=${pm.recordsTotal}/${pm.pageSize})
+                    		#end
+    						#foreach($pn in [1..$pageNum])
+                    			#set($startNum=${pm.pageSize}*(${pn} - 1))
+                        			#if($columnType==2)
+                    					<a class="now" href="$!{rc.contextPath}/news/goUniversityNoticeNewsPage?length=${pm.length}&start=${startNum}">$pn</a>
+                    				#elseif($columnType==3)
+                    					<a class="now" href="$!{rc.contextPath}/news/goUniversityStudentsNewsPage?length=${pm.length}&start=${startNum}">$pn</a>
+                    				#elseif($columnType==4)
+                    					<a class="now" href="$!{rc.contextPath}/news/goUniversityProblemPage?length=${pm.length}&start=${startNum}">$pn</a>
+                    				#elseif($columnType==5)
+                    					<a class="now" href="$!{rc.contextPath}/news/goUniversityUploadPage?length=${pm.length}&start=${startNum}">$pn</a>
+                    				#end
+                    		#end
+                		#else
+							无数据
+						#end
+					
+                    </div>
+             </ul>
+        </div>
+              
+     </div>
+     
+#parse("/common/usercenter/footer.vm")
+

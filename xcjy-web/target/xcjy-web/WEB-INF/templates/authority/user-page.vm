@@ -1,0 +1,50 @@
+<script src="$!{rc.contextPath}/js/templates/authority/user-page.js"></script>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">用户管理</h3>
+        </div>
+        <div class="panel-body"  >
+    		
+			<div class="row">
+				<div class="col-xs-12" >
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="search-name">用户名称</label>
+                <input type="text" class="form-control" id="search-name" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="search-role">角色名称</label>
+                <input type="email" class="form-control" id="search-role" placeholder="">
+              </div>
+              <button type="button" class="btn btn-default" id="btn-search-user">查询</button>
+            </form>
+            </div>
+            </div>
+    		
+    		<div class="row" style="margin-top: 10px;margin-bottom: 5px;">
+				<div class="col-xs-12" >
+    			<button class="btn btn-primary btn-md" type="button" id="btn-add-user">新增</button>
+    			<button class="btn btn-info btn-md"    type="button" id="btn-update-user">修改</button>
+    			<button class="btn btn-danger btn-md"  type="button" id="btn-del-user">删除</button>
+                <button class="btn btn-success btn-md" type="button" id="btn-user-reset">重置密码</button>
+				</div>
+            </div>
+    		
+    		<table id="tbl-option" class="display">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>名称</th>
+                        <th>角色</th>
+                        <th>手机</th>
+                        <th>EMAIL</th>
+						<th>创建时间</th>
+						<th>修改时间</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    	<div id="user-modal"></div>
+    </div>

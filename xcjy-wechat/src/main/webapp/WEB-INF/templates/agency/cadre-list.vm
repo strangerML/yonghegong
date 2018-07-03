@@ -1,0 +1,56 @@
+#set($htmlTitle = "西城区教育考试中心")
+#set($cssFiles = ["css/intro.css"])
+
+ <div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/intro01.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goCenterNewsPage">情况介绍</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="#">干部队伍</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/cadre/goDepartCadre">部门职能</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/cadre/goAgencyCadre">机构设置</a></li>
+                  </ul>
+             </div>
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>
+				#if($!{cadre.cadreType}==1)
+					干部队伍
+				#elseif($!{cadre.cadreType}==2)
+					部门职能
+				#elseif($!{cadre.cadreType}==3)
+					机构设置
+				#end
+			 </div>
+             <div class="chaxungbdw">
+					$!{cadre.contents}
+             </div>
+             
+             
+        </div>
+              
+     </div>
+
+     
+     
+#parse("/common/usercenter/footer.vm")
+

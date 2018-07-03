@@ -1,0 +1,152 @@
+#set($htmlTitle = "西城区教育考试中心")
+#set($cssFiles = ["css/style.css"])
+ <script type="text/javascript" src="$!{rc.contextPath}/js/myjs.js"></script>
+ <script type="text/javascript" src="$!{rc.contextPath}/js/common.js"></script>
+
+
+	<div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant">
+        <div class="left">
+             <div class="left-top"><span>图片新闻</span></div>
+             <div class="js">
+                
+  <div id="box">
+	<ul id="list">
+		<li><a href="#"><img src="$!{rc.contextPath}/images/01.jpg"/></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/02.jpg"/></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/03.jpg"/></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/04.jpg"/></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/05.jpg"/></a></li>
+	</ul>
+	<ul id="num">
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>		
+	</ul>
+</div>
+
+
+<div class="top_menu">
+<div class="top_right">
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_qzone"></a>
+<a class="bds_tsina"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+</div>
+</div> 
+             
+             </div>
+             <div class="left-img"><img src="$!{rc.contextPath}/images/address.png" width="298" height="156" /></div>
+             <div class="red">
+                  <span>联系方式</span>
+             </div>
+             <div class="cont">
+                  <p>
+					 #foreach($em in $contactList)
+						$!{em.officeName}：$!{em.tel} <br /> 
+					 #end
+                 
+                  </p>             
+                  <img src="$!{rc.contextPath}/images/left02.png" width="326" height="25" />
+             </div>         
+        </div>
+        
+        <div class="contont">
+        
+             <div class="middle">
+                  <div class="middle-top"><span>中心新闻</span><a href="$!{rc.contextPath}/news/goNewsCenterPage" target="_blank">更多</a></div>
+                     <ul>
+						 #foreach($em in $newsList)
+							<li><a href="$!{rc.contextPath}/news/findNewsDetails?id=$!{em.id}">#set($str=$!{em.newsTitle})#if($str.length()>35)#set($str=$str.substring(0,30))•$str...#else•$!{em.newsTitle}#end	
+							</a><span>$!date.format('yyyy-MM-dd ',$!em.createTime)</span></li>
+    					 #end
+                        
+                     </ul>
+                     <img src="$!{rc.contextPath}/images/middle02.png" width="584" height="23" />
+             </div>
+         
+             <div class="zhongxin">
+                 <div class="zhongxin-top"></div>
+                 <div class="zx01"><a href="$!{rc.contextPath}/news/goCenterNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/zhongxin02.png" width="130" height="130" /></a><br />
+                             <span><a href="$!{rc.contextPath}/news/goCenterNewsPage" target="_blank">情况介绍</a></span></div>
+                 <div class="zx02"><a href="#"><img src="$!{rc.contextPath}/images/zhongxin03.png" width="130" height="130" /></a><br /><span><a href="#">干部队伍</a></span></div>
+                 <div class="zx03"><a href="$!{rc.contextPath}/cadre/goDepartCadre"><img src="$!{rc.contextPath}/images/zhongxin04.png" width="130" height="130" /></a><br /><span><a href="$!{rc.contextPath}/cadre/goDepartCadre">部门职能</a></span></div>
+                 <div class="zx04"><a href="$!{rc.contextPath}/cadre/goAgencyCadre"><img src="$!{rc.contextPath}/images/zhongxin05.png" width="130" height="130" /></a><br /><span><a href="$!{rc.contextPath}/cadre/goAgencyCadre">机构设置</a></span></div>
+                 <img src="$!{rc.contextPath}/images/middle02.png" width="584" height="23" />
+             </div>
+        
+        </div>
+        
+        
+       <div class="right">
+             <div class="right01">
+                 <div class="right-top"><span>最新公告</span><a href="$!{rc.contextPath}/news/goNoticeNewsPage" target="_blank">more></a>
+                      <ul>
+						 #foreach($em in $newssList)
+							<li><a href="$!{rc.contextPath}/news/findNewsDetails?id=$!{em.id}">#set($str=$!{em.newsTitle})#if($str.length()>20)#set($str=$str.substring(0,20))•$str...#else•$!{em.newsTitle}#end	
+							</a></li>
+						 #end
+                         
+                      </ul>
+                 </div>
+             </div>
+             
+             <div class="right02">
+                  <div class="right02-top"><span>用户登录</span></div>
+				  <a href="http://localhost:8080/xcjy-web"><img src="images/d.png" width="260" height="120"/></a>
+                  
+                  <img src="$!{rc.contextPath}/images/right02.png" width="262" height="25" />
+             </div>
+             
+             <div class="right03">
+                  <div class="right03-top"><span>党政工作信息</span></div>
+                  <div class="right-list"><a href="$!{rc.contextPath}/news/goPartyAffairsNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/right04.png" width="60" height="60" /></a><br />
+                                    <span><a href="$!{rc.contextPath}/news/goPartyAffairsNewsPage" target="_blank">党务工作</a></span></div>
+                  <div class="right-list"><a href="$!{rc.contextPath}/news/goAffairsPublicityNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/right05.png" width="60" height="60" /></a><br />
+                                    <span><a href="$!{rc.contextPath}/news/goAffairsPublicityNewsPage" target="_blank">政务公开</a></span></div>
+                  <div class="right-list"><a href="$!{rc.contextPath}/news/goActivityNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/right06.png" width="60" height="60" /></a><br />
+                                    <span><a href="$!{rc.contextPath}/news/goActivityNewsPage" target="_blank">工会活动</a></span></div>
+                  <img src="$!{rc.contextPath}/images/right02.png" width="262" height="25" />
+             </div>
+        </div>
+        
+        <img src="$!{rc.contextPath}/images/line.jpg" width="1200" height="40" />        
+     </div>
+
+     
+     <div class="list">
+          <a href="$!{rc.contextPath}/news/goSchoolsNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list01.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goJuniorNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list02.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goMiddleNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list03.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goHighsNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list04.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goUniversityNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list05.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goAdultNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list06.png" width="285" height="199" /></a>
+          <a href="$!{rc.contextPath}/news/goSelfsNoticeNewsPage" target="_blank"><img src="$!{rc.contextPath}/images/list07.png" width="285" height="199" /></a>
+          <img src="$!{rc.contextPath}/images/list08.png" width="285" height="199" />
+     </div>
+     
+     
+#parse("/common/usercenter/footer.vm")
+

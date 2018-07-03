@@ -1,0 +1,33 @@
+<!-- easyui tree css-->
+<link rel="stylesheet" type="text/css" href="$!{rc.contextPath}/css/easyui/easyui.css">
+<link rel="stylesheet" type="text/css" href="$!{rc.contextPath}/css/easyui/icon.css">
+<link rel="stylesheet" type="text/css" href="$!{rc.contextPath}/css/easyui/easyTree.css">
+<link rel="stylesheet" type="text/css" href="$!{rc.contextPath}/css/authority/module/tree.css">
+<!-- easyui tree -->
+<script src="$!{rc.contextPath}/js/jquery-easyui/jquery.easyui.min.js"></script>
+<script src="$!{rc.contextPath}/js/templates/authority/module-page.js"></script>
+<div class="container-fluid">
+    <div class="panel panel-primary">
+    	<div class="panel-heading">
+    		资源管理
+    	</div>
+    	<div class="panel-body">
+    
+    		 <div style="margin-top:30px;;margin-bottom: 30px;">
+                <table id="tt" >
+    
+                </table>
+    		</div>
+    
+    	</div>
+        <div id="module-merge-modal"></div>
+        <div id="mm" class="easyui-menu" style="width:120px;">
+            <div onclick="appendRoot()" id="addRootMenu" data-options="iconCls:'icon-add'">新增根节点</div>
+            <div onclick="append()" id="addMenu" data-options="iconCls:'icon-add'">新增子节点</div>
+            <div onclick="modify()" data-options="iconCls:'icon-edit'">修改节点</div>
+            <div onclick="del()" data-options="iconCls:'icon-remove'">删除节点</div>
+        </div>
+    </div>
+    <div id="modal"></div>
+    <div id="myModal"></div>
+</div>

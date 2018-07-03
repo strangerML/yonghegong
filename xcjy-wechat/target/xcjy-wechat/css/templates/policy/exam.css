@@ -1,0 +1,44 @@
+
+*{margin:0px;padding:0px;}
+ul,ol{list-style: none;}
+body{background-color:#f5f5f5;font-family:'微软雅黑';}
+.banner{text-align: center;}
+.banner img{width:100%; height: 150px; min-width: 320px;}
+.content{width:100%; height: auto; border-top: 1px solid #e5e5e5; padding-bottom: 50px;}
+.center{height:100px; margin: 10px 15px;padding-bottom: 15px; background: #eae9e9; border: 1px solid #e5e5e5; border-radius: 5px;}
+.center font{font-size: 16px;background: #209e85; color: #ffffff; float: left; border-radius: 5px; padding: 5px 10px; margin: 18px 20px 8px;}
+.center font a{font-size: 16px; color: #ffffff; text-decoration: none;}
+.center p{width:100%; float:left; font-size: 16px; line-height: 30px;}
+.center p a{font-size: 16px; color: #464343; text-decoration: none; padding: 5px 20px;}
+
+.cont{height:30px; margin: 10px 15px; background: #fbf7dc; border: 1px solid #ede2a0;}
+.cont p{font-size: 16px; line-height: 30px; color: #caa032; padding: 0 15px;}
+.cont p font{font-size: 16px; color: #209e85; padding: 5px 0; margin: 18px 5px 8px;}
+
+.keshi{float:left; padding:0 0 10px; margin: 0 15px 10px; background: #ffffff; border: 1px solid #e5e5e5;}
+.keshi p font{font-size: 16px; line-height: 35px; color: #209e85; padding: 0 15px;}
+.keshi p span{font-size: 14px; line-height: 18px; color: #444444; padding: 0 15px; float: left;}
+.keshi p a{font-size: 16px; line-height: 18px; color: #ffffff; background: #209e85; text-decoration: none; border-radius: 5px; padding: 5px 15px; margin: 10px;}
+.keshi ul{font-size: 14px; line-height: 18px; color: #444444; marign: 0 15px;}
+.keshi ul li{width:313px; font-size: 14px; line-height: 18px; color: #444444; line-height: 25px; padding: 0 15px;}
+
+.daohang{float:left; width: 77%; margin: 0 15px 10px;}
+.daohang p font{font-size: 16px; line-height: 35px; color: #209e85; padding: 0 15px 5px;}
+.daohang p a{font-size: 16px; line-height: 18px; color: #ffffff; background: #209e85; text-decoration: none; border-radius: 5px; text-align: center; width: 100%; padding: 8px 5%; margin:0 5% 10px 5%; float: left;}
+
+.chaxun{float:left; padding:0 0 10px; margin: 0 15px 10px; background: #ffffff; border: 1px solid #e5e5e5; border-radius: 5px 5px 0 0;}
+.chaxun p {font-size: 16px; line-height: 35px; background: #209e85; text-align: center; border-radius: 5px 5px 0 0;}
+.chaxun p font{font-size: 16px; line-height: 35px; color: #ffffff; padding: 0 15px 5px;}
+.chaxun span input{width:140px; height: 30px; border: 1px solid #eae9e9; border-radius: 5px; margin: 15px 3px 5px; padding:0 5px; color: #b9b8b8;}
+.chaxun span a{font-size: 16px; color: #ffffff; text-decoration: none; background: #209e85; margin-right: 40px; padding: 5px 10px; border-radius: 5px;}
+
+.intro{float:left; padding-bottom: 10px; margin: 0 15px 60px; background: #ffffff; border: 1px solid #e5e5e5;}
+.intro p font{font-size: 16px; line-height: 35px; color: #209e85; padding: 0 15px;}
+.intro ul{font-size: 14px; line-height: 18px; color: #444444; marign: 0 15px;}
+.intro ul li{font-size: 14px; line-height: 18px; border-bottom:1px solid #eae9e9; color: #444444; line-height: 25px; margin: 0 15px;}
+
+
+.tab{position: fixed; bottom: 0; width:100%; height: 49px; background: #f9f9f9; border-top: 1px solid #e5e5e5;}
+.bar{width:29%; height: 49px; text-align: center; float:left; margin: 5px 2% 0; font-size: 12px;}
+.bar img{width:25px; height:23px; margin-bottom: 2px;}
+.bar a{font-size: 12px; color: #676767; text-decoration:none;}

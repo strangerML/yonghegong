@@ -1,0 +1,6 @@
+.idea/
+.settings/
+META-INF/
+*.project
+build.properties
+xcjy-framework.iml

@@ -1,0 +1,47 @@
+<script src="$!{rc.contextPath}/js/templates/news/news-page.js"></script>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">中心简介</h3>
+        </div>
+        <div class="panel-body"  >
+			<div class="row">
+				<div class="col-xs-12" >
+				<form class="form-inline">
+					<div class="form-group">
+                        <label for="search-newsTitle">标题</label>
+                        <input type="text" class="form-control" id="search-newsTitle" placeholder="">
+                    </div>
+					<div class="form-group">
+        				<input id="newsTypeId" name="newsTypeId" type="hidden" value="$!{newsTypeId}">
+                      </div>
+              <button type="button" class="btn btn-default" id="btn-search-news">查询</button>
+            </form>
+            </div>
+            </div>
+    		
+    		<div class="row" style="margin-top: 10px;margin-bottom: 5px;">
+				<div class="col-xs-12" >
+    			<button class="btn btn-primary btn-md" type="button" id="btn-add-news">新增</button>
+    			<button class="btn btn-info btn-md" style="" type="button" id="btn-update-news">修改</button>
+    			<button class="btn btn-danger btn-md" type="button" id="btn-del-news">删除</button>
+    			<button class="btn btn-success btn-md" type="button" id="btn-freeze-news">冻结</button>
+    			<button class="btn btn-warning btn-md" type="button" id="btn-toFreeze-news">解除冻结</button>
+                </div>
+            </div>
+    		
+    		<table id="tbl-option" class="display">
+                <thead>
+                    <tr>
+						<th>多选</th>
+						<th>标题</th>
+                        <th>创建时间</th>
+                        <th>点击次数</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    	<div id="news-modal"></div>
+    </div>

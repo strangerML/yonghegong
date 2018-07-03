@@ -1,0 +1,77 @@
+#set($layout="layout/layout-null.vm")
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">权限信息管理</h4>
+            </div>
+            <div class="modal-body">
+				<form id="mudule-add-form" class="form-horizontal">
+					<input name="id" id="moduleId" type="hidden" value="$!{m.id}">
+                    <input name="parentId" type="hidden" id="parentId" value="$!{m.parentId}">
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">权限名称</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="权限名称" value="$!{m.name}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">权限标识</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="sn1" name="sn" placeholder="权限标识" value="$!{m.sn}">
+                        </div>
+                    </div>
+					
+					<div class="form-group">
+                        <label class="col-lg-3 control-label">顺序</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" id="order" name="order" placeholder="顺序" value="$!{m.order}">
+                        </div>
+                    </div>
+					
+                    <div class="form-group" style="display:none">
+                        <label class="col-lg-3 control-label">是否是叶子节点</label>
+                        <div class="col-lg-5">
+                            <input class="form-control" id="isLeaf" type="hidden"  name="isLeaf" placeholder="是否是叶子节点" value="$!{m.isLeaf}">
+                        </div>
+                    </div>
+					#if($isLeaf == 1)
+                    <div class="form-group" id="moduleUrl" style="display:none">
+                        <label class="col-lg-3 control-label">路径</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" name="url" id="url" placeholder="路径" value="$!{m.url}">
+                        </div>
+                    </div>
+					#end
+					 <div class="form-group" >
+                         <label class="col-lg-3 control-label">备注</label>
+                         <div class="col-lg-5">
+                            <input type="text" class="form-control" name="remark" id="remark" placeholder="备注" value="$!{m.remark}">
+                         </div>
+                    </div>
+					
+					#if($isLeaf == 1)
+					<div  class="form-group">
+						<label class="col-lg-3 control-label">绑定操作</label>
+                        <div class="col-lg-5">
+                            #foreach( $p in $operations)
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" name="operationIds" value="$!p.id" #foreach($s in $!ps) #if($!p.id==$!s.operationId) checked #end #end>$!p.name</input>
+                                </label>
+                            #end
+                        </div>
+					</div>
+				   #end	
+				</form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="save" onclick="save();">保存</button>
+            </div>
+        </div>
+    </div>
+</div>

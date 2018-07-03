@@ -1,0 +1,37 @@
+#set($cssFiles = ["css/templates/policy/exam.css"])
+#set($jsFiles = ["js/templates/policy/policyClass.js"])
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit"/>
+	     <input type="hidden" id="newsType" name="newsType" value="$!{newsType}"/>
+	     <div class="content">
+		     <div class="cont">
+	      	      <p>联系我们：<font id="dianhua"></font></p>
+	         </div>
+	         
+	         <div class="keshi">
+	      	      <p><font>科室简介</font></p>
+	      	      <p><span id="jianjie"></span></p>
+	         </div>
+	         
+	         <div class="daohang">
+	      	      <p><font>栏目导航</font></p>
+	      	      <p><a href="javascript:void(0);" onclick="goPolicyNews(2)">公告通知</a>
+					 <a href="javascript:void(0);" onclick="goPolicyNews(3)">招考政策</a>
+					 <a href="javascript:void(0);" onclick="goPolicyNews(4)">问题解答</a>
+					 #if($!{newsType}==5)
+						<a href="javascript:void(0);" onclick="goPolicyNews(5)">相关下载</a>
+					 #end
+					 
+				  </p>
+	         </div>
+	         
+	         
+        </div>
+        
+		<div class="tab">
+		 	  <div class="bar"><a href="$!{rc.contextPath}/main"><img src="$!{rc.contextPath}/images/main/tab02.png" width="25" height="23"></a><br><span><a  href="$!{rc.contextPath}/main">首页</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2"><img src="$!{rc.contextPath}/images/main/tab04.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2">中心新闻</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goPolicyPage"><img src="$!{rc.contextPath}/images/main/tab05.png" width="25" height="23"></a><br><span><a style="color:#209e85;" href="$!{rc.contextPath}/news/goPolicyPage">政策公告</a></span></div>
+		 	 ## <div class="bar"><a href="login.html"><img src="$!{rc.contextPath}/images/main/tab08.png" width="25" height="23"></a><br><span><a href="login.html">个人中心</a></span></div>		 	
+        </div>
+        

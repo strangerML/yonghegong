@@ -1,0 +1,38 @@
+#set($layout="layout/layout-cadre.vm")
+#set($htmlTitle = "中心简介")
+#set($cssFiles = ["css/templates/main/center.css"])
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit"/>
+<body style="background:#fff;>
+	     <div class="content">
+		     <div class="font">
+	      	      <font>$!{newsInfo.newsTitle}$!{newsInfo.name}</font><br>
+	      	      <span>
+					$!date.format('yyyy-MM-dd HH:mm:ss ',$!{newsInfo.createTime})
+					<a href="#">
+						$!{newsInfo.newsTypeName}
+						#if($!{newsInfo.cadreType}==1)
+							干部队伍
+						#elseif($!{newsInfo.cadreType}==2)
+							部门职责
+						#elseif($!{newsInfo.cadreType}==3)
+							机构设置
+						#end
+					</a>
+				  </span>
+	         </div>
+         </div>
+		 <div class="banner"><img src="$!{rc.contextPath}/images/main/banner.jpg" width="100%" height="150"></div>
+		 <div style="margin-bottom:65px;">
+		 $!{newsInfo.contents}
+         </div>
+</body>
+
+<!--底部导航-->
+    <div class="tab">
+		 	  <div class="bar"><a href="$!{rc.contextPath}/main"><img src="$!{rc.contextPath}/images/main/tab01.png" width="25" height="23"></a><br><span><a style="color:#209e85;" href="$!{rc.contextPath}/main">首页</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2"><img src="$!{rc.contextPath}/images/main/tab04.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2">中心新闻</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goPolicyPage"><img src="$!{rc.contextPath}/images/main/tab06.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goPolicyPage">政策公告</a></span></div>
+		 	 ## <div class="bar"><a href="login.html"><img src="$!{rc.contextPath}/images/main/tab08.png" width="25" height="23"></a><br><span><a href="login.html">个人中心</a></span></div>		 	
+        </div>

@@ -1,0 +1,59 @@
+#set($htmlTitle = "西城区教育考试中心")
+#set($htmlTitle = "中心工作")
+#set($cssFiles = ["css/templates/main/main.css","css/templates/main/style.css","css/templates/party/partyNews.css"])
+#set($jsFiles = ["js/templates/party/partyNews.js"])
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit"/>
+
+<!-- 顶部导航栏 -->
+	<header class="page_hd">
+		<input type="hidden" id="columnType" name="columnType" value="$!{columnType}"/>
+		
+            <nav class="navbar navbar-fixed-top" style="min-height:30px">
+				<div id="dv">
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="tabSelect('tab_health_9',9)" id="tab_health_9">党务工作</a></li>
+                    <li><a href="javascript:void(0);" onclick="tabSelect('tab_health_10',10)" id="tab_health_10">行政公开</a></li>
+                    <li><a href="javascript:void(0);" onclick="tabSelect('tab_health_8',8)" id="tab_health_8">工会活动</a></li>
+                </ul>
+				</div>
+            </nav>
+		
+        </header>
+		<!--下部社管动态数据列表-->
+	
+        <div  style="margin-top: 10px;margin-bottom:70px;">
+        	<input type="hidden" id="page-params" value="6,5"/>
+			<input type="hidden" id="newsType" name="newsType" value="$!{newsType}"/>
+        	<div id="news-dynamic" style="margin-bottom:5px;" class="content">
+        		
+        	</div>
+        	
+        	<div id="news-hint" class="text-center"  style="display:none;">
+        		
+        	</div>
+        	<div id="data-loading" class="media" style="display:none;">
+        		<center>
+        			<div class="panel panel-default" style="width:150px;">
+        				<div class="panel-body" style="width:150px;padding:2px;">
+        					<div class="media-left">
+                              <img alt="loading" class="media-object" style="width: 20px; height: 20px;" src="$!{rc.contextPath}/images/loading.gif" data-holder-rendered="true">
+                              </div>
+                              <div class="media-body" style="width:100px;">
+                        			正在加载……
+                              </div>
+                	   </div>
+            	   </div>
+        	  </center>
+            </div>
+        	<div id="btn-more" class="button"><a href="javascript:void(0)" onclick="loadMore()">加载更多</a></div>
+        </div>
+		
+		<!--底部导航-->
+        <div class="tab">
+		 	  <div class="bar"><a href="$!{rc.contextPath}/main"><img src="$!{rc.contextPath}/images/main/tab02.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/main">首页</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2"><img src="$!{rc.contextPath}/images/main/tab03.png" width="25" height="23"></a><br><span><a style="color:#209e85;" href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2">中心新闻</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goPolicyPage"><img src="$!{rc.contextPath}/images/main/tab06.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goPolicyPage">政策公告</a></span></div>
+		 	 ## <div class="bar"><a href="login.html"><img src="$!{rc.contextPath}/images/main/tab08.png" width="25" height="23"></a><br><span><a href="login.html">个人中心</a></span></div>		 	
+        </div>
+	

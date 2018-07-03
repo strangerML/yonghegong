@@ -1,0 +1,12 @@
+#set($jsFiles = ["js/templates/slider/yxMobileSlider.js","js/templates/slider-demo.js"])
+#set($cssFiles = ["css/slider.css"])
+<!--效果html开始-->
+	<div class="slider">
+	  <ul>
+	    <li><a href="#"><img src="$!{rc.contextPath}/images/slider/1.jpg" alt="科e互联网站建设团队"></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/slider/2.jpg" alt="网页特效集锦"></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/slider/3.jpg" alt="JS代码素材库"></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/slider/4.jpg" alt="用心建站用心服务"></a></li>
+		<li><a href="#"><img src="$!{rc.contextPath}/images/slider/5.jpg" alt="学会用才能学会写"></a></li>
+	  </ul>
+	</div>

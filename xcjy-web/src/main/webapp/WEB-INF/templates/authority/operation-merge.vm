@@ -1,0 +1,43 @@
+#set($layout="layout/layout-null.vm")
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/js/templates/authority/operation-merge.js"></script>
+<div class="modal fade" id="operation-merge-modal" tabindex="-1" role="dialog" aria-labelledby="operation-merge-label">
+                <div class="modal-dialog" role="document" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="operation-merge-label">操作管理</h4>
+                        </div>
+                        <div class="modal-body">
+							<form id="operation-merge-form" class="form-horizontal">
+								<input id="id" name="id" type="hidden" value="$!{operation.id}">
+            					<div class="form-group">
+                                    <label class="col-lg-3 control-label" for="name">操作名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" id="name" name="name" value="$!{operation.name}"/>
+                                    </div>
+                                </div>	
+            						
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="sn">操作标识符</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" id="sn" name="sn" value="$!{operation.sn}"/>
+                                    </div>
+                                </div>
+								
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="remark">备注</label>
+                                    <div class="col-lg-8">
+                                    <textarea class="form-control" rows="3" id="remark" name="remark">$!{operation.remark}</textarea>
+                                    </div>
+                                </div>
+            			 	</form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="btn-operation-merge">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>

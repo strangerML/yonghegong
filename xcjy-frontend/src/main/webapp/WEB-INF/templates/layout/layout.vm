@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 声明文档结构类型 -->
+<html lang="zh-cn">
+<!-- 声明文档文字区域-->
+<head>
+
+#parse("/common/css-resources.vm")
+
+#if(${cssFiles} && !$cssFiles.isEmpty())
+	#foreach (${element} in ${cssFiles})
+<link rel="stylesheet" href="$!{rc.contextPath}/${element}">
+	
+	#end
+#end
+
+<title>$!{htmlTitle}</title>
+</head>
+<body>
+	 $screen_content  
+	 
+<!-- js 项目跟路径 -->
+<script type="text/javascript">
+    var basePath='$!{rc.contextPath}/';
+</script>
+#parse("/common/js-resources.vm")
+
+#if(${jsFiles} && !$jsFiles.isEmpty())
+	#foreach (${jselement} in ${jsFiles})
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/${jselement}"></script>
+
+	#end
+#end
+</body>
+</HTML>

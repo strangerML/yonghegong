@@ -1,0 +1,40 @@
+<div class="container-fluid">
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+	
+<script >
+$(document).ready( function () {
+	var options = {
+			"ordering": false,
+			"processing": true,
+			language: {
+                url: '$!{rc.contextPath}/js/datatables/chinese.json'
+            },
+			"searching": false,
+			serverSide: false,
+			"dom": "<'row'<'col-xs-12't>><'row'<'col-xs-4'l><'col-xs-4'i><'col-xs-4'p>>"
+            //ajax: {
+            //    url: '/data-source',
+            //   type: 'POST'
+            //}
+		};
+    $('#table_id').DataTable(options);
+} );
+</script>

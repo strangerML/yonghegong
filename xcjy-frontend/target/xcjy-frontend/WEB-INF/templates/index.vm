@@ -1,0 +1,166 @@
+#set($htmlTitle = "西城考试中心")
+
+#set($cssFiles = ["css/style.css"])
+#set($jsFiles = ["js/index/index.js","js/jquery1.42.min.js","js/SuperSlide/jquery.SuperSlide.2.1.1.js"])
+
+	
+		<style type="text/css">
+		/* css 重置 */
+		*{margin:0; padding:0; list-style:none; }
+		body{ background:#fff; font:normal 12px/22px 宋体;  }
+		img{ border:0;  }
+		a{ text-decoration:none; color:#333;  }
+
+		/* 本例子css */
+		.slideBox{ width:300px; height:180px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+		.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+		.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+		.slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+		.slideBox .hd ul li.on{ background:#f00; color:#fff; }
+		.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; }
+		.slideBox .bd img{ width:450px; height:230px; display:block;  }
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideBox .prev,
+		.slideBox .next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+		.slideBox .prev:hover,
+		.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+		.slideBox .prevStop{ display:none;  }
+		.slideBox .nextStop{ display:none;  }
+
+		</style>
+		<style type="text/css">
+				#allmap{width:90%;height:158px; }
+				p{margin-left:5px; font-size:14px;}
+				.anchorBL{display:none;}
+			</style>
+		<div class="con">
+			<div class="box">
+		          <div style="width:100%; height:244px; background:url(images/toptop.png) center center no-repeat;"></div>
+		     </div>
+     
+     <div class="contant">
+        <div class="left">
+             <div class="left-top"><span>图片新闻</span></div>
+             <div class="js" style="width:300px; margin:5px 0 5px 13px;">
+				<div id="slideBox" class="slideBox">
+					
+        			<div class="hd">
+        				<ul>
+							#foreach($em in $picList)
+								<li>$velocityCount</li>
+							#end
+						</ul>
+        			</div>
+        			<div class="bd">
+        				<ul>
+							#foreach($em in $picList)
+        					<li>
+								<a href="$!{rc.contextPath}/cadre/goPicNewsDetails?picId=$!{em.id}" target="_blank" >
+    							  <img src="$!{rc.contextPath}/download?filePath=$!{em.pictures}" style="width:300px;height:180px"/>
+                                </a>
+							</li>
+							#end
+        					##<li><a href="http://www.SuperSlide2.com" target="_blank"><img src="$!{rc.contextPath}/images/demo/pic2.jpg" /></a></li>
+        				</ul>
+        			</div>
+
+        			<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        			<a class="prev" href="javascript:void(0)"></a>
+        			<a class="next" href="javascript:void(0)"></a>
+
+				</div>
+
+             </div>
+             <div class="left-img" id="allmap"></div>
+             <div class="red">
+                  <span>联系方式</span>
+             </div>
+             <div class="cont">
+                  <p>
+					 #foreach($em in $contactList)
+						$!{em.officeName}：$!{em.tel} <br /> 
+					 #end                 
+                  </p>             
+                  <img src="$!{rc.contextPath}/images/left02.png" width="326" height="25" />
+             </div>         
+        </div>
+        
+        <div class="contont">
+        
+             <div class="middle">
+                  <div class="middle-top"><span>最新公告</span><a target="_blank" href="$!{rc.contextPath}/news/goNoticeNewsPage">更多</a></div>
+                     <ul>
+						 #foreach($em in $newssList)
+							<li><a target="_blank" href="$!{rc.contextPath}/news/findNewsDetails?id=$!{em.id}">#set($str=$!{em.newsTitle})#if($str.length()>30)#set($str=$str.substring(0,25))•$str...#else•$!{em.newsTitle}#end	
+							</a><span>$!date.format('yyyy-MM-dd ',$!em.createTime)</span></li>
+    					 #end
+                        
+                     </ul>
+                     <img src="$!{rc.contextPath}/images/middle02.png" width="584" height="23" />
+             </div>
+         
+             <div class="zhongxin">
+                 <div class="zhongxin-top"></div>
+                 <div class="zx01"><a target="_blank" href="$!{rc.contextPath}/news/goCenterNewsPage"  ><img src="$!{rc.contextPath}/images/zhongxin09.png" width="275" height="130" /></a><br />
+                             <span><a target="_blank" href="$!{rc.contextPath}/news/goCenterNewsPage" >基本情况</a></span></div>
+                 <div class="zx03"><a target="_blank" href="$!{rc.contextPath}/cadre/goAgencyCadre"><img src="$!{rc.contextPath}/images/zhongxin08.png" width="275" height="130" /></a><br /><span><a target="_blank" href="$!{rc.contextPath}/cadre/goDepartCadre">机构设置</a></span></div>
+                 <img src="$!{rc.contextPath}/images/middle02.png" width="584" height="23" />
+             </div>
+        
+        </div>
+        
+        
+       <div class="right">
+             <div class="right01">
+                 <div class="right-top"><span>中心新闻</span><a target="_blank" href="$!{rc.contextPath}/news/goNewsCenterPage" >more></a>
+                      <ul>
+						 #foreach($em in $newsList)
+							<li><a target="_blank" href="$!{rc.contextPath}/news/findNewsDetails?id=$!{em.id}">#set($str=$!{em.newsTitle})#if($str.length()>15)#set($str=$str.substring(0,15))•$str...#else•$!{em.newsTitle}#end	
+							</a></li>
+						 #end
+                         
+                      </ul>
+                 </div>
+             </div>
+             
+             <div class="right02">
+                  <div class="right02-top"><span>用户登录</span></div>
+                  <a target="_blank" href="http://www.xjks.org/xcjy-web"><img src="$!{rc.contextPath}/images/denglu1.png" wdith="260" height="60"/></a>                 
+                  <a target="_blank" href="http://117.107.16.115/accounts/sign_in"><img src="$!{rc.contextPath}/images/denglu2.png" wdith="260" height="55"/></a>
+                  <img src="$!{rc.contextPath}/images/right02.png" width="262" height="25" />
+             </div>
+             
+             <div class="right03">
+                  <div class="right03-top"><span>中心工作信息</span></div>
+                  <div class="right-list"><a target="_blank" href="$!{rc.contextPath}/news/goPartyAffairsNewsPage" ><img src="$!{rc.contextPath}/images/right04.png" width="60" height="60" /></a><br />
+                                    <span><a target="_blank" href="$!{rc.contextPath}/news/goPartyAffairsNewsPage" >党务工作</a></span></div>
+                  <div class="right-list"><a target="_blank" href="$!{rc.contextPath}/news/goAffairsPublicityNewsPage" ><img src="$!{rc.contextPath}/images/right05.png" width="60" height="60" /></a><br />
+                                    <span><a target="_blank" href="$!{rc.contextPath}/news/goAffairsPublicityNewsPage" >行政公开</a></span></div>
+                  <div class="right-list"><a target="_blank" href="$!{rc.contextPath}/news/goActivityNewsPage" ><img src="$!{rc.contextPath}/images/right06.png" width="60" height="60" /></a><br />
+                                    <span><a target="_blank" href="$!{rc.contextPath}/news/goActivityNewsPage" >工会活动</a></span></div>
+                  <img src="$!{rc.contextPath}/images/right02.png" width="262" height="25" />
+             </div>
+        </div>
+        
+        <img src="$!{rc.contextPath}/images/line.jpg" width="1200" height="40" />        
+     </div>
+
+     
+     <div class="list">
+          <a target="_blank" href="$!{rc.contextPath}/news/goSchoolsNoticeNewsPage"><img src="$!{rc.contextPath}/images/list01.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goJuniorNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list02.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goMiddleNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list03.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goHighsNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list04.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goUniversityNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list05.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goAdultNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list06.png" width="285" height="100" /></a>
+          <a target="_blank" href="$!{rc.contextPath}/news/goSelfsNoticeNewsPage" ><img src="$!{rc.contextPath}/images/list07.png" width="285" height="100" /></a>
+          <img src="$!{rc.contextPath}/images/list08.png" width="285" height="100" />
+     </div>
+     
+     </div>
+     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=e7SjaAZ7HAwUsztkG7mMaZbW"></script>
+#parse("/common/usercenter/footer.vm")
+

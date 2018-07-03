@@ -1,0 +1,12 @@
+com\xcjy\wechat\utils\DataTablesPageModel.class
+com\xcjy\wechat\utils\DownloadServlet.class
+com\xcjy\wechat\controller\main\MainController.class
+com\xcjy\wechat\controller\news\NewsController.class
+com\xcjy\wechat\config\spring\AppConfig.class
+com\xcjy\wechat\config\spring\ServiceConfig.class
+com\xcjy\wechat\config\spring\DataConfig$1.class
+com\xcjy\wechat\controller\agency\CadreController.class
+com\xcjy\wechat\config\mvc\WebConfig.class
+com\xcjy\wechat\config\spring\DataConfig.class
+com\xcjy\wechat\config\initializer\SpringWebApplicationInitializer.class
+com\xcjy\wechat\utils\UploadFileServlet.class

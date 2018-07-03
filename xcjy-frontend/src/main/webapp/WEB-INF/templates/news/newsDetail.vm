@@ -1,0 +1,57 @@
+#set($htmlTitle = "西城考试中心")
+#set($cssFiles = ["css/intro.css"])
+
+	  <div class="top"></div>
+     <div class="topt"></div>
+     
+     <div class="head">
+          <div class="box">
+               <div class="logo"><a href="http://www.xjks.org"><img src="$!{rc.contextPath}/images/logo.png" width="740" height="90" /></a><div>
+          </div>
+     </div>
+     
+     
+     <div class="banner">
+          <div style="width:100%; height:360px; background:url($!{rc.contextPath}/images/banner.png) center center no-repeat;"></div>
+     </div>
+     
+     <div class="line"></div>
+     
+     <div class="contant wrap">
+     
+        <div class="left">
+             <div class="daohang">
+                  <img src="$!{rc.contextPath}/images/intro01.png" width="244" height="53" />
+                  <ul>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goPartyAffairsNewsPage">党务工作</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goAffairsPublicityNewsPage">政务公开</a></li>
+                      <li><span><img src="$!{rc.contextPath}/images/intro02.png" width="20" height="14" /></span><a href="$!{rc.contextPath}/news/goActivityNewsPage">工会活动</a></li>
+                  </ul>
+             </div>
+        </div>
+        
+        <div class="right">
+             <div class="right-top"><span></span>
+				#if($!{news.columnType}==8)
+					工会活动
+				#elseif($!{news.columnType}==9)
+					党务工作
+				#elseif($!{news.columnType}==10)
+					政务公开
+				#end
+			 </div>
+              <div class="chaxunlist">
+                  <h3>$!{news.newsTitle}</h3>
+                  <font>
+					$!{news.contents}
+					#if (${news.pictures} && "" !=${news.pictures})
+						<a href= "$!{rc.contextPath}/download?filePath=$!{news.pictures}">附件下载</a>
+					#end
+				  </font>
+             </div>
+        </div>
+              
+     </div>
+     
+#parse("/common/usercenter/footer.vm")
+

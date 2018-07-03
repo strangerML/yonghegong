@@ -1,0 +1,47 @@
+<script src="$!{rc.contextPath}/js/templates/authority/operation-page.js"></script>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">操作管理</h3>
+        </div>
+        <div class="panel-body"  >
+    		
+			<div class="row">
+				<div class="col-xs-12" >
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="search-name">操作名称</label>
+                <input type="text" class="form-control" id="search-name" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="search-sn">操作标识符</label>
+                <input type="email" class="form-control" id="search-sn" placeholder="">
+              </div>
+              <button type="button" class="btn btn-default" id="btn-search-operation">查询</button>
+            </form>
+            </div>
+            </div>
+    		
+    		<div class="row" style="margin-top: 10px;margin-bottom: 5px;">
+				<div class="col-xs-12" >
+    			<button class="btn btn-primary btn-md" type="button" id="btn-add-operation">新增</button>
+    			<button class="btn btn-info btn-md" style="" type="button" id="btn-update-operation">修改</button>
+    			<button class="btn btn-danger btn-md" type="button" id="btn-del-operation">删除</button>
+                </div>
+            </div>
+    		
+    		<table id="tbl-option" class="display">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>操作名称</th>
+                        <th>操作标识符</th>
+                        <th>创建时间</th>
+                        <th>修改时间</th>
+                        <th>备注</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    	<div id="operation-modal"></div>
+    </div>

@@ -1,0 +1,33 @@
+#set($layout="layout/layout-null.vm")
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/js/templates/contact/contact-check.js"></script>
+
+<div class="modal fade" id="contact-merge-modal" tabindex="-1" role="dialog" aria-labelledby="contact-merge-label">
+                <div class="modal-dialog" role="document" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="contact-merge-label">联系我们编辑</h4>
+                        </div>
+                        <div class="modal-body">
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="officeName">办公室名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" id="officeName" name="officeName" value="$!{contact.officeName}"/>
+                                    </div>
+                                </div>	
+								
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="tel">电话</label>
+                                    <div class="col-lg-8">
+										<input type="text" class="form-control" id="tel" name="tel" value="$!{contact.tel}"/>
+                                    </div>
+                                </div>	
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                        </div>
+                    </div>
+                </div>
+            </div>

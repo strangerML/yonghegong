@@ -1,0 +1,40 @@
+<script src="$!{rc.contextPath}/js/templates/contact/contact-page.js"></script>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">联系我们</h3>
+        </div>
+        <div class="panel-body"  >
+			<div class="row">
+				<div class="col-xs-12" >
+				<form class="form-inline">
+					<div class="form-group">
+                        <label for="search-officeName">办公室名称</label>
+                        <input type="text" class="form-control" id="search-officeName" placeholder="">
+                    </div>
+              <button type="button" class="btn btn-default" id="btn-search-contact">查询</button>
+            </form>
+            </div>
+            </div>
+    		
+    		<div class="row" style="margin-top: 10px;margin-bottom: 5px;">
+				<div class="col-xs-12" >
+    			<button class="btn btn-primary btn-md" type="button" id="btn-add-contact">新增</button>
+    			<button class="btn btn-info btn-md" style="" type="button" id="btn-update-contact">修改</button>
+    			<button class="btn btn-danger btn-md" type="button" id="btn-del-contact">删除</button>
+                </div>
+            </div>
+    		
+    		<table id="tbl-option" class="display">
+                <thead>
+                    <tr>
+						<th>办公室名称</th>
+                        <th>联系电话</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    	<div id="contact-modal"></div>
+    </div>

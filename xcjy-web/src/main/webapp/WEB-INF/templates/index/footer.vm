@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="$!{rc.contextPath}/css/templates/footer.css">
+<div id="footer" style="font-family:'微软雅黑';">
+   #*
+   <p>20xx-20xx XXX版权所有，并保留所有权利       服务热线：400-xxx-xxxx</p>
+   <a href="http://www.xxxx.com/" target="_blank">www.xxxx.com </a>&nbsp;&nbsp;&nbsp;<a href="http://www.xxxx.gov.cn/" target="_blank">粤ICP备0908xxxx号 </a>
+   *#
+</div>

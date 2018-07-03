@@ -1,0 +1,2 @@
+<!-- jQuery文件。务必在bootstrap.js 之前引入 -->
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/js/jquery-1.11.3/jquery.min.js"></script>

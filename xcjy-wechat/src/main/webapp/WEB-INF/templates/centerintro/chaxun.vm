@@ -1,0 +1,28 @@
+#set($htmlTitle = "中心简介")
+#set($cssFiles = ["css/templates/main/chaxun.css"])
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit"/>
+	
+	 <div class="content">
+		     <div class="center">
+	      	      <font>成绩查询</font><br>
+	      	      <span><input name="" type="text" value="请输入证件号码" /><a href="$!{rc.contextPath}/cadre/goChaxunerror">查询</a></span>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font>录取结果</font><br>
+	      	      <span><input name="" type="text" value="请输入证件号码" /><a href="$!{rc.contextPath}/cadre/goChaxunerror">查询</a></span>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font>派位结果</font><br>
+	      	      <span><input name="" type="text" value="请输入证件号码" /><a href="$!{rc.contextPath}/cadre/goChaxunerror">查询</a></span>
+	         </div>
+        </div>
+<!--底部导航-->
+        <div class="tab">
+		 	  <div class="bar"><a href="$!{rc.contextPath}/main"><img src="$!{rc.contextPath}/images/main/tab01.png" width="25" height="23"></a><br><span><a style="color:#209e85;" href="$!{rc.contextPath}/main">首页</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2"><img src="$!{rc.contextPath}/images/main/tab04.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2">中心新闻</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goPolicyPage"><img src="$!{rc.contextPath}/images/main/tab06.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goPolicyPage">政策公告</a></span></div>
+		 	 ## <div class="bar"><a href="login.html"><img src="$!{rc.contextPath}/images/main/tab08.png" width="25" height="23"></a><br><span><a href="login.html">个人中心</a></span></div>		 	
+        </div>

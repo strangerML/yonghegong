@@ -1,0 +1,48 @@
+#set($htmlTitle = "政策公告")
+#set($cssFiles = ["css/templates/policy/exam.css"])
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="renderer" content="webkit"/>
+	     <div class="content">
+		     <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=10">义务教育：小学入学</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=10">义务教育：小学入学简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=11">义务教育：初中入学</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=11">普义务教育：初中入学简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=7">高级中等学校招生</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=7">高级中等学校招生简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=8">普通高中会考</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=8">普通高中会考简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=5">普通高等学校招生</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=5">普通高等学校招生简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=6">成人高等学校招生</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=6">成人高等学校招生简介</a></p>
+	         </div>
+	         
+	         <div class="center">
+	      	      <font><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=9">高等教育自学考试</a></font><br>
+	      	      <p><a href="$!{rc.contextPath}/news/goPolicyClassPage?newsTypeId=9">高等教育自学考试简介</a></p>
+	         </div>
+        </div>
+        
+		<div class="tab">
+		 	  <div class="bar"><a href="$!{rc.contextPath}/main"><img src="$!{rc.contextPath}/images/main/tab02.png" width="25" height="23"></a><br><span><a  href="$!{rc.contextPath}/main">首页</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2"><img src="$!{rc.contextPath}/images/main/tab04.png" width="25" height="23"></a><br><span><a href="$!{rc.contextPath}/news/goNewInfoPage?newsTypeId=2">中心新闻</a></span></div>
+		 	  <div class="bar"><a href="$!{rc.contextPath}/news/goPolicyPage"><img src="$!{rc.contextPath}/images/main/tab05.png" width="25" height="23"></a><br><span><a style="color:#209e85;" href="$!{rc.contextPath}/news/goPolicyPage">政策公告</a></span></div>
+		 	 ## <div class="bar"><a href="login.html"><img src="$!{rc.contextPath}/images/main/tab08.png" width="25" height="23"></a><br><span><a href="login.html">个人中心</a></span></div>		 	
+        </div>
+        

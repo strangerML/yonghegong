@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,dl,dd,img,form,div,ul,ol,li,h1,h2,h3,h4,h5,h6,p{margin:0;padding:0;border:0;}
+body{font-size:12px;font-family:'微软雅黑',Arial;}
+ul,ol,li{ list-style-type:none;}
+img{border:0;vertical-align:middle}
+select,input,select{vertical-align:middle;outline: none;}
+table{border-collapse:collapse;border-spacing:0}
+iframe{border:none;}
+a:link{color:#666666;text-decoration:none;}
+a:visited{color:#666666;text-decoration:none;}
+a:hover{color:#0093ff;text-decoration:none;}
+a:active{color:#0093ff;text-decoration:none;}
+.c{clear:both;font-size:0;line-height:0;height:0;visibility:visible;}
+.h{display:none;visibility:visible;}
+.wrap{border:0;padding:0;width:1200px;margin:0 auto;*zoom:1;}
+.wrap:after{clear:both;content:"";display:table;}
+.fix{*zoom:1;}
+.fix:after{clear:both;content:"";display:table;}
+.fl{float:left;}
+.fr{float:right;}
+
+/* header */
+.section{overflow:hidden;position:relative!important;}
+.header{height:100px;}
+.header h1{width:154px;}
+.logo{padding-top:24px;}
+.header .logo_text{width:163px;margin-top:24px;padding-left:5px;}
+
+.nav{margin-top:40px;position:relative;}
+.nav li{float:left;padding-left:40px;}
+.nav li a{font-size:16px;color:#000000;line-height:24px;display:inline-block;}
+.nav li a:hover{border-bottom:2px solid #2fafbc;}
+.nav .nav_icon{background:#15909c;height:1px;line-height:1px;display:inline-block;position:relative;top:-6px;*top:0px;}
+
+.news_list{width: 1200px;margin: 0 auto;overflow:hidden;}
+.news_list li{background: #f7f7f7;zoom:1;margin-top: 40px;position: relative;}
+.news_list .line{display: block;position: absolute;background: #2eafbb;}
+.news_list li:after{content: "";clear: both;display: table;}
+.news_time{background: #2eafbb;width: 120px;height: 100%;padding: 18px 20px 40px 0;}
+.news_time .day{display: block;font-size: 70px;color: #fff;font-family: "Impact";text-align: right; line-height:150px; height:150px;}
+.news_cont{width: 980px;margin-right: 40px;}
+.news_contc{width: 1150px; padding:0 25px 20px 25px;}
+.news_contc h2{font-size: 20px;font-weight: normal;padding-top: 26px; color:#2eafbb; text-align:center;}
+.news_contc .demo{line-height: 24px; margin-top: 20px; font-size:16px; color:#666; padding:50px 0 20px 300px; line-height:30px;}
+
+
+/* footer */
+.contact{background: #2eafbb;margin-top:40px;padding-top:38px;padding-bottom:60px; width:100%; min-width:1600px;}
+.contact h2{margin-bottom:28px;}
+.contact h2 a{font-size:18px;color:#fff;font-weight:normal;}
+.home_about{width:250px;}
+.home_about dt{margin-bottom: 24px;}
+.home_about dt a{font-size:18px;color:#fff;font-weight:normal;}
+.home_about dd{color: #eeeeee;line-height: 28px;font-family: "宋体";}
+.home_about .more{color: #fff;display: inline-block;border: 1px solid #cccccc;line-height: 38px;padding: 0 24px;margin-top: 12px;}
+.home_about .more:hover{border-color: #fff;}
+.home_case{width:300px;margin-left:45px;}
+.home_case li{border-top:1px solid #ccc;height:52px;padding:14px 0;}
+.home_case li:first-child{border:0;padding-top:3px;}
+.home_case li img{float: left;margin-right: 18px;}
+.home_case h5{margin-top:-5px;line-height:28px;}
+.home_case h5 a{font-size:14px;color:#fff;font-weight:normal;}
+.home_case .ttext{line-height:22px;}
+.home_case .ttext a{color:#dddddd;font-family:"宋体";}
+.home_case .label{color: #cccccc;line-height: 28px;}
+.home_service{width: 160px;margin-left:45px;}
+.home_service a.sub{font-size: 12px;color: #fff;line-height: 38px;width: 98px;display: inline-block;border: 1px solid #cccccc;text-align: center;margin-right: 12px;margin-bottom: 12px;margin-top: 3px;}
+.home_service a.sub:hover{border-color: #fff;}
+.home_contact{margin-left:40px;}
+.home_contact li{color: #ddd;margin-bottom: 14px;}
+.home_contact li i{display:inline-block;width:18px;height:18px;margin-right: 10px;vertical-align: middle;}
+.home_contact li .addres{background: url("../images/sprite.png") no-repeat 0 -20px  ;}
+.home_contact li .weibo{background: url("../images/sprite.png") no-repeat -20px -20px  ;}
+.home_contact li .email{background: url("../images/sprite.png") no-repeat -40px -20px  ;}
+.home_contact li .weixin{background: url("../images/sprite.png") no-repeat -80px -20px  ;}
+.home_contact li .call{background: url("../images/sprite.png") no-repeat -0px -0px  ;}
+.home_contact li a{color: #ddd;}
+.blogroll{line-height: 28px;color: #999;text-align: center;padding: 30px 0;}
+.blogroll a{color: #999;display:inline-block;}
+.blogroll a:hover{color: #333;}
+.blogroll .copyright{margin-top: 16px;}

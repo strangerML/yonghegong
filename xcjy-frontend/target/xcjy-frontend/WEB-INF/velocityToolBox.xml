@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<toolbox>
+	<!-- application start -->
+	<!-- <tool>
+		<key>shiro</key>
+		<scope>application</scope>
+		<class>com.vcyber.web.shiro.tag.Permission</class>
+	</tool> -->
+	<!-- application end -->
+
+	<tool>
+		<key>date</key>
+		<scope>application</scope>
+		<class>org.apache.velocity.tools.generic.DateTool</class>
+	</tool>
+	
+</toolbox>

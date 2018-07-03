@@ -1,0 +1,51 @@
+#set($layout="layout/layout-null.vm")
+<!-- umditor 富文本编辑器  bigin -->
+	<link href="$!{rc.contextPath}/js/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript"  src="$!{rc.contextPath}/js/ueditor/umeditor.config.js"></script>
+    <script type="text/javascript"  src="$!{rc.contextPath}/js/ueditor/umeditor.min.js"></script>
+    <script type="text/javascript" src="$!{rc.contextPath}/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+<!-- umditor 富文本编辑器 end -->
+<script type="text/javascript" charset="utf8" src="$!{rc.contextPath}/js/templates/agency/cadre-check.js"></script>
+
+<div class="modal fade" id="cadre-merge-modal" tabindex="-1" role="dialog" aria-labelledby="cadre-merge-label">
+                <div class="modal-dialog" role="document" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="cadre-merge-label">信息查看</h4>
+                        </div>
+                        <div class="modal-body">
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="name">名称</label>
+                                    <div class="col-lg-8">
+                                        <input type="text" class="form-control" id="name" name="name" value="$!{cadre.name}"/>
+                                    </div>
+                                </div>	
+								
+                    		    <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="contents">内容</label>
+                                    <div class="col-lg-8">
+										<textarea rows="3" id="contents" name="contents" >$!{cadre.contents}</textarea>
+                                    </div>
+                                </div>	
+								#if ($!{cadre.pictures})							
+								 <div class="form-group">
+                                    <label class="col-lg-3 control-label" for="pictures">图片</label>
+                                    <div class="col-lg-8">
+								
+                							<div style="max-width:100px;max-heigth:100px;width:100%;heigth:100%">
+												<img src= "/xcjy-web/download?filePath=$!{cadre.pictures}" style="width:auto;heigth:auto;max-width:100%;max-heigth:100%;" />
+											</div>
+                					
+                                    </div>
+                                </div>
+									#end
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
